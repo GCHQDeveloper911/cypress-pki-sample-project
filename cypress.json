@@ -1,0 +1,26 @@
+{
+  "baseUrl": "https://localhost:8443",
+  "chromeWebSecurity": false,
+  "clientPkiCertificates": [
+    {
+      "url": "https://localhost:8443/*",
+      "ca": [ "certs/ca/ca.pem" ],
+      "certs": [
+        {
+          "cert": "certs/client/user_pem/cert.pem",
+          "key": "certs/client/user_pem/private.key"
+        }
+      ]
+    },
+    {
+      "url": "https://localhost:8443/whoami/pfx",
+      "ca": [ "certs/ca/ca.pem" ],
+      "certs": [
+        {
+          "pfx": "certs/client/user_pfx/cert.pfx",
+          "passphrase": "certs/client/user_pfx/pfx-passphrase.key"
+        }
+      ]
+    }
+  ]
+}
